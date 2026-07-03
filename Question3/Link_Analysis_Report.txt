@@ -1,0 +1,19 @@
+=== Link Analysis Report ===
+
+1. Inode Numbers:
+Command executed: ls -li
+Observation: This reveals that the original file and its hard link share the exact same internal index ID (inode), while the symbolic link has its own unique ID.
+
+2. Hard Link vs Symbolic Link:
+Observation: A hard link points directly to the physical data on the disk, acting like an identical twin. A symbolic link is just a shortcut pointing to the file name.
+
+3. Effect of Deleting Original File:
+Command executed: rm original.txt
+Observation: After deleting the original file, the hard link still successfully reads the data. However, the symbolic link breaks completely because its target path is gone.
+
+4. Metadata Collection:
+Command executed: stat hard_link.txt
+Observation: This reads deep metadata parameters like exact size, access rights, links count, and system timestamps.
+
+5. Summary of Findings:
+Observation: Hard links are highly resilient data survivors since they preserve raw data access. Symbolic links are useful shortcuts but depend entirely on the source remaining intact.
