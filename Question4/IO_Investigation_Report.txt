@@ -1,0 +1,19 @@
+=== IO Investigation Report ===
+
+1. Open Files Identified:
+Command executed: lsof
+Observation: This prints an extensive list of all active files and network streams currently being utilized by system processes.
+
+2. File Descriptor Observations:
+Observation: Linux handles everything as streams, tracking files using standard descriptors (0 for input, 1 for standard output, 2 for error messages).
+
+3. Output and Error Redirection:
+Command executed: echo "Log" > output.log && ls non_existent 2> error.log
+Observation: Using '>' routes standard output into a file, while '2>' intercepts error messages and saves them away from the screen.
+
+4. Resource Limits:
+Command executed: ulimit -n
+Observation: This prints the absolute maximum cap of open file streams a single user process is permitted to hold at once.
+
+5. Linux I/O Management:
+Observation: Linux handles input and output as uniform streams, allowing developers to route, mute, or save outputs and logs cleanly.
