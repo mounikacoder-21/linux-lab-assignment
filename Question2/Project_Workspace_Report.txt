@@ -1,0 +1,20 @@
+=== Project Workspace Report ===
+
+1. Directory Structure:
+Command executed: mkdir secure_workspace && touch secure_workspace/project_data.txt
+Observation: This creates a brand new directory named 'secure_workspace' containing an empty file named 'project_data.txt'.
+
+2. File Permissions Before and After:
+Command executed: chmod 700 secure_workspace && chmod 600 secure_workspace/project_data.txt
+Observation: Initially, files have default open permissions. After modification, '700' and '600' ensure only the owner can read/write, blocking everyone else completely.
+
+3. Ownership Details:
+Command executed: ls -ld secure_workspace && ls -l secure_workspace/project_data.txt
+Observation: This displays detailed ownership strings, verifying that my account is the explicit owner.
+
+4. Umask Value:
+Command executed: umask
+Observation: This displays the default system mask value, which automatically controls baseline security permissions for any newly created files.
+
+5. Data Protection Explanation:
+Observation: Restricting access ensuring that even if other users log into this machine, they are strictly blocked from reading or tampering with our sensitive project data.
