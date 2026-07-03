@@ -1,0 +1,22 @@
+=== Environment Report ===
+
+1. Username and Groups:
+Command executed: whoami
+Command executed: groups
+Observation: These commands show the current logged-in user session name and the security groups my account belongs to.
+
+2. Current Shell:
+Command executed: echo $SHELL
+Observation: This prints the path of the active shell execution environment (e.g., /bin/bash).
+
+3. Current Working Directory:
+Command executed: pwd
+Observation: This prints the exact absolute path of the directory I am currently working in.
+
+4. Workspace Files:
+Command executed: ls -la
+Observation: This displays a detailed list of all files, including hidden system configuration files, in my workspace.
+
+5. Network Connectivity:
+Command executed: ping -c 3 google.com
+Observation: This checks my internet connection by sending 3 test packets to Google and watching them successfully bounce back.
