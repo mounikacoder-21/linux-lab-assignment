@@ -1,0 +1,24 @@
+=== Storage Assessment Report ===
+[Documented using the vi text editor utility]
+
+1. Available Storage Devices:
+Command executed: lsblk
+Observation: This displays a beautiful visual block map tree of all attached hard drives and active partition splits.
+
+2. Mounted File Systems:
+Command executed: mount
+Observation: This shows exactly how physical disk chunks are hooked up and mapped to system folder paths.
+
+3. Disk Usage Statistics:
+Command executed: df -h
+Observation: This summarizes disk usage in human-readable gigabytes, showing how much space is consumed versus available.
+
+4. Inode Utilization:
+Command executed: df -i
+Observation: This monitors the index allocation table usage to ensure the file system has empty slots left to create new files.
+
+5. Storage Health Observations:
+Observation: The storage environment is healthy, well-partitioned, and operating within highly safe storage margins.
+
+6. Recommendations:
+Observation: We should schedule weekly logs cleanups and configure automated alerts to warn us if disk storage crossed 85% utilization.
